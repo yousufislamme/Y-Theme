@@ -51,27 +51,16 @@ function linkAction() {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== Scroll HEADER Bar ===============*/
-var prevScrollpos = window.pageYOffset;
+var prevScroll = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScroll > currentScrollPos) {
         document.getElementById("header").style.top = "0";
     } else {
         document.getElementById("header").style.top = "-100px";
     }
-    prevScrollpos = currentScrollPos;
+    prevScroll = currentScrollPos;
 }
-
-
-// Mouse Cursor change
-
-
-// const cursor = new cursor({
-//     container: "body",
-//     speed: 0.7, // animation speed
-//     ease: "expo.out", // gsap easing
-//     visibleTimeout: 300
-// });
 
 const sr = ScrollReveal({
     origin: 'left',
